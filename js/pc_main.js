@@ -2,26 +2,26 @@ window.addEventListener("load", function(){
 	var container=document.getElementsByClassName("container")[0].children;
 	var body=document.getElementsByTagName("body")[0];
 
-	// // 팝업
-	// for(var i=0; i<container.length; i++){
-	// 	if(container[i].className == "pop"){
-	// 		var pop=container[i];
-	// 		var close=pop.children[1];
-	// 	}
-	// 	else if(container[i].className == "dim"){
-	// 		var dim=container[i];
-	// 	}
-	// }
-	//
-	// body.classList.add("static");
-	// dim.classList.add("static");
-	//
-	// close.addEventListener("click", function(e){
-	// 	e.preventDefault();
-	// 	pop.style.display="none";
-	// 	body.classList.remove("static");
-	// 	dim.classList.remove("static");
-	// });
+	// 팝업
+	for(var i=0; i<container.length; i++){
+		if(container[i].className == "pop"){
+			var pop=container[i];
+			var close=pop.children[1];
+		}
+		else if(container[i].className == "dim"){
+			var dim=container[i];
+		}
+	}
+	
+	body.classList.add("static");
+	dim.classList.add("static");
+	
+	close.addEventListener("click", function(e){
+		e.preventDefault();
+		pop.style.display="none";
+		body.classList.remove("static");
+		dim.classList.remove("static");
+	});
 
 
 	// 키비주얼
